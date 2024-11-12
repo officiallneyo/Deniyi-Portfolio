@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Designer Portfolio</title>
+    <style>
+        /* Styles for the scroll-to-top button */
+        .scroll-to-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #29282b;
+            color: #ffffff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            z-index: 9999;
+            transition: background-color 0.3s ease;
+        }
+
+        .scroll-to-top:hover {
+            background-color: #c14fe4;
+        }
+    </style>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            // Create the scroll-to-top button
+            var scrollToTopButton = document.createElement('button');
+            scrollToTopButton.textContent = 'Top';
+            scrollToTopButton.classList.add('scroll-to-top');
+            document.body.appendChild(scrollToTopButton);
+
+            // Show the scroll-to-top button when scrolling down
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 100) {
+                    scrollToTopButton.style.display = 'block';
+                } else {
+                    scrollToTopButton.style.display = 'none';
+                }
+            });
+
+            // Smooth scroll to top when the button is clicked
+            scrollToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    
+  <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to bottom, #000000, #240642, #532263, #832678, #532253);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+
+        header {
+            background-image: url('purp.jpg'); /* Change to the actual image file */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        } footer {
+            background-color: #3e0283;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffc107;
+        }
+
+        section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        .slider-container {
+            max-width: 500px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            overflow: hidden;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        .slide-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 30px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border: none;
+            z-index: 10;
+        }
+
+        .slide-btn.prev {
+            left: 0;
+        }
+
+        .slide-btn.next {
+            right: 0;
+        }
+
+        .portfolio-item {
+            color: #fff;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content {
+    display: flex;
+    align-items: center;
+}
+
+.about-img {
+    flex: 1;
+    max-width: 200px; /* Adjust the width of the image as per your requirement */
+}
+
+.about-img img {
+    max-width: 130%;
+    height: auto;
+    border-radius: 5px; /* Rounded corners for the image */
+}
+
+.about-text {
+    flex: 2;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .about-img {
+        margin-bottom: 20px;
+    }
+}
+
+        h3 {
+            font-size: 1.5em;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #ffffff;
+        }
+
+        .social-icons a {
+            color: #ffffff;
+            font-size: 24px;
+            margin-right: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #7b0bfa;
+        }
+
+        footer {
+            background-color: #3e0281;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav ul li a {
+                font-size: 1em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            .portfolio-item img {
+                max-width: 100%;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .social-icons a {
+                font-size: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 576px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav ul li a {
+                font-size: 0.9em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            .portfolio-item img {
+                max-width: 100%;
+            }
+
+            h3 {
+                font-size: 1.1em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            .social-icons a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Deniyi Ola - Graphic Designer</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="section">
+        <div class="container">
+            <h2>Welcome to My Portfolio</h2>
+            <p class="intro">Welcome! I'm delighted to introduce you to my portfolio—a showcase of my dedication to the art and craft of graphic design. Within these digital walls, you'll find a curated collection of my finest work, spanning a spectrum of projects from branding and illustration to user interface design and marketing campaigns.
+
+                My approach to design is anchored in the belief that every pixel, color, and line serves a purpose. Beyond aesthetics, I strive to infuse each creation with meaning, emotion, and clarity of message. Whether collaborating with clients to define their brand identity or translating ideas into captivating visuals, my goal remains the same: to craft experiences that resonate with audiences and leave a lasting impression.
+                
+                I invite you to explore my portfolio and embark on a journey through the stories, ideas, and inspirations that shape my work. Whether you're seeking design solutions or simply curious to see where creativity meets innovation, I'm excited to connect with you and explore the endless possibilities together. Thank you for joining me—let's embark on a creative adventure!
+                
+                
+                </p>
+        </div>
+    </section>
+
+    <section id="slider" class="section">
+        <div class="container">
+            <h2>Featured Works</h2>
+            <div class="slider-container">
+                <div class="slides">
+                    <div class="slide"><img src="globalT logo.png" alt="Slide 1"></div>
+                    <div class="slide"><img src="AEtrades flyer.png" alt="Slide 2"></div>
+                    <div class="slide"><img src="global Tech Logo.png" alt="Slide 3"></div>
+                </div>
+                <button class="slide-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="slide-btn next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p class="intro">Feel free to reach out to me through the following channels:</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/deniyi_ola/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com/olanreforward11/"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/8062507052"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Deniyi Ola - Graphic Designer</p>
+            <a href="#" class="scroll-to-top"><i class="fas fa-arrow-up"></i></a>
+        </div>
+    </footer>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3500); // Change image every 2 seconds
+        }
+        
+        function moveSlide(n) {
+            showSlides(slideIndex += n);
+        }
+    </script>
+</body>
+</html>

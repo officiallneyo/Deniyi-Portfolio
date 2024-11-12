@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Designer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var scrollToTopButton = document.querySelector('.scroll-to-top');
+    
+            // Show the scroll-to-top button when scrolling down
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 100) {
+                    scrollToTopButton.style.display = 'block';
+                } else {
+                    scrollToTopButton.style.display = 'none';
+                }
+            });
+    
+            // Smooth scroll to top when the button is clicked
+            scrollToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    
+  <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #000000;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+
+        header {
+            background-image: url('purp.jpg'); /* Change to the actual image file */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        } footer {
+            background-color: #37066e;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffc107;
+        }
+
+        section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        .portfolio-item {
+            color: #fff;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-img {
+    max-width: 450px; /* Adjust the width of the image as per your requirement */
+    margin-bottom: 20px;
+}
+
+.about-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Rounded corners for the image */
+}
+
+.about-text {
+    max-width: 350px; /* Adjust the width of the text content */
+}
+
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .about-img {
+        margin-bottom: 20px;
+    }
+}
+
+        h3 {
+            font-size: 1.5em;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #ffffff;
+        }
+
+        .social-icons a {
+            color: #ffffff;
+            font-size: 24px;
+            margin-right: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #7b0bfa;
+        }
+
+        footer {
+            background-color: #3e0281;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Deniyi Ola - Graphic Designer</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p class="intro">Feel free to reach out to me through the following channels:</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/deniyi_ola/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com/olanreforward11/"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/8062507052"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Deniyi Ola - Graphic Designer</p>
+        </div>
+    </footer>
+</body>
+</html>

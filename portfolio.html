@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Designer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to bottom, #000000, #240642, #532263, #832678, #532253);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+
+        header {
+            background-image: url('purp.jpg'); /* Change to the actual image file */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        } 
+        footer {
+            background-color: #37066e;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffc107;
+        }
+
+        section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        .portfolio-item {
+            color: #fff;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .description {
+            margin-top: 30px;
+            text-align: justify;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Deniyi Ola - Graphic Designer</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="portfolio" class="section">
+        <div class="container">3
+            <h2>Portfolio</h2>
+            <div id="portfolio-items"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Deniyi Ola - Graphic Designer</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Define array of projects with their details
+            const projects = [
+                {
+                    image: 'sprite design.png',
+                    title: 'Sprite Design',
+                    description: 'As a graphic designer, I embarked on a creative journey using Microsoft Office Word, a platform primarily known for editing and creating text documents, to craft a captivating sprite design. Leveraging the program\'s array of shapes, text boxes, and formatting tools, I meticulously assembled each component of the sprite, from its basic structure to intricate details and embellishments. With an eye for symmetry and balance, I transformed simple shapes into a visually stunning creation, applying gradients, textures, and effects to add depth and dimensionality. Through experimentation and innovation, I pushed the boundaries of what\'s possible with Word, demonstrating its versatility as a tool for graphic design. The result is a remarkable fusion of creativity and technology, showcasing the potential for artistic expression in unexpected places.'
+                },
+                {
+                    image: 'Arab Exchange.png',
+                    title: 'Arab Exchange',
+                    description: 'Crafted with precision and creativity, our trading company flyer embodies the essence of sophistication and professionalism, captivating viewers with sleek design elements and vibrant imagery. From dynamic product showcases to enticing offers, every detail is meticulously curated to engage and inspire, reflecting our commitment to excellence in visual communication.'
+                           },
+                           {
+                            image: 'queeney1.png',
+                            title: 'Queeney\'s Cake',
+                            description: 'Indulge in the sweet symphony of our cake and doughnut baking company\'s brochure flyer, where delectable treats leap off the page with tantalizing visuals and irresistible flavors. From velvety cakes to fluffy doughnuts, our brochure promises a mouthwatering journey through the artistry and flavors of our delectable creations'
+                           }         
+                // Add more projects here
+            ];
+
+            // Get the portfolio items container
+            const portfolioContainer = document.getElementById('portfolio-items');
+
+            // Loop through projects and create HTML elements
+            projects.forEach(project => {
+                const projectDiv = document.createElement('div');
+                projectDiv.classList.add('portfolio-item');
+
+                const image = document.createElement('img');
+                image.src = project.image;
+                image.alt = project.title;
+
+                const title = document.createElement('h3');
+                title.textContent = project.title;
+
+                const description = document.createElement('p');
+                description.classList.add('description');
+                description.textContent = project.description;
+
+                projectDiv.appendChild(image);
+                projectDiv.appendChild(title);
+                projectDiv.appendChild(description);
+
+                portfolioContainer.appendChild(projectDiv);
+            });
+        });
+    </script>
+</body>
+</html>
